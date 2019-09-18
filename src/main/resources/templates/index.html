@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>富文本编辑器</title>
+    <script type="text/javascript" charset="UTF-8" th:src="@{/wangEditor/js/wangEditor.min.js}"></script>
+    <script type="text/javascript" charset="utf-8" th:src="@{/webjars/jquery/3.4.1/jquery.js}"></script>
+    <script type="text/javascript" charset="utf-8" th:src="@{/webjars/bootstrap/4.3.1/js/bootstrap.js}"></script>
+    <link  th:href="@{/webjars/bootstrap/4.3.1/css/bootstrap.css}" rel="stylesheet">
+</head>
+<body>
+    <div class="col-md-10" id="container"><p>欢迎使用 <b>wangEditor</b> 富文本编辑器</p>
+    </div>
+    <button class="btn btn-primary" onclick="publish()">发布</button>
+    <button class="btn btn-danger" onclick="clearEditor()">清空</button>
+    <br>
+    <div id="text1" class="col-md-10">
+
+    </div>
+    <script type="text/javascript">
+        var E = window.wangEditor;
+        var editor = new E('#container');
+
+        //上传图片到服务器接口，后台程序进行处理
+        editor.customConfig.uploadImgServer = "/wangEditor/uploadImg";
+        //后台接收图片时的参数
+        editor.customConfig.uploadFileName = "img";
+
+        //上传图片为Base64的格式进行存储
+        // editor.customConfig.uploadImgShowBase64 = true;
+        //图片最大上传为3M
+        editor.customConfig.uploadImgMaxSize = 3*1024*1024;
+        //一次性最多上传5张图片
+        editor.customConfig.uploadImgMaxLength = 5;
+        //隐藏上传网路图片的tab
+        editor.customConfig.showLinkImg = false;
+        editor.create();
+
+        function publish() {
+            $.post("/wangEditor/getContent",
+                {
+                    "data": editor.txt.html()
+                }, function (data) {
+                    $("#text1").html(data.extend.hc);
+                })
+        }
+
+        function clearEditor() {
+            editor.txt.clear();
+        }
+    </script>
+</body>
+</html>
