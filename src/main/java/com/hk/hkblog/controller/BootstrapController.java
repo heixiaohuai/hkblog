@@ -25,4 +25,14 @@ public class BootstrapController {
     public String bootstrap02(){
         return "/bootstrap/bootstrap02";
     }
+
+    @GetMapping("/bootstrap03")
+    public String bootstrap03(){
+        return "/bootstrap/bootstrap03";
+    }
+
+    @GetMapping("/bootstrap04")
+    public String bootstrap04(){
+        return "/bootstrap/bootstrap04";
+    }
 }
