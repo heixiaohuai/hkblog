@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>bootstrap01</title>
+    <script type="text/javascript" charset="utf-8" th:src="@{/webjars/jquery/3.4.1/jquery.js}"></script>
+    <script type="text/javascript" charset="utf-8" th:src="@{/webjars/bootstrap/3.3.7/js/bootstrap.js}"></script>
+    <link  th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap.css}" rel="stylesheet">
+    <style type="text/css">
+        body{
+            margin-top: 50px;
+        }
+        .starter{
+            text-align: center;
+            margin: 40px 15px;
+        }
+        .lead{
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="#" class="navbar-brand">Project Name</a>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Content</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+<div class="container">
+    <div class="starter">
+        <h1>BootStrap starter template</h1>
+        <p class="lead">[2019-09-19 09:21:32,657][INFO] SPIDER_CONTENT CRMJPFX_ZQ_HXZQ None 2018-09-29 00:00:01 CRMJPFX_ZQ_HXZQ.ADDR 爬虫开始执行
+            [2019-09-19 09:21:32,658][INFO] SPIDER_CONTENT CRMJPFX_ZQ_HXZQ None 2018-09-29 00:00:01 CRMJPFX_ZQ_HXZQ.ADDR 爬虫选取实体code：CRMJPFX_ZQ_HXZQ
+            [2019-09-19 09:21:32,703][INFO] SPIDER_CONTENT CRMJPFX_ZQ_HXZQ None 2018-09-29 00:00:01 CRMJPFX_ZQ_HXZQ.ADDR 从mongo地址中取一条数据
+            [2019-09-19 09:21:32,735][ERROR] SPIDER_CONTENT CRMJPFX_ZQ_HXZQ None 2018-09-29 00:00:01 CRMJPFX_ZQ_HXZQ.ADDR 去mongodb中取一条数据，但没有找到可用数据，终止程序
+            [2019-09-19 09:21:32,737][INFO] SPIDER_CONTENT CRMJPFX_ZQ_HXZQ None 2018-09-29 00:00:01 CRMJPFX_ZQ_HXZQ.ADDR 爬虫开始运行---
+            [2019-09-19 09:21:32,739][INFO] SPIDER_CONTENT CRMJPFX_ZQ_HXZQ None 2018-09-29 00:00:01 CRMJPFX_ZQ_HXZQ.ADDR 当前实体CRMJPFX_ZQ_HXZQ运行的版本为：1.0.10
+            [2019-09-19 09:21:32,793][INFO] SPIDER_CONTENT CRMJPFX_ZQ_HXZQ None 2018-09-29 00:00:01 CRMJPFX_ZQ_HXZQ.ADDR 爬虫开始执行
+            [2019-09-19 09:21:32,794][INFO] SPIDER_CONTENT CRMJPFX_ZQ_HXZQ None 2018-09-29 00:00:01 CRMJPFX_ZQ_HXZQ.ADDR 爬虫选取实体code：CRMJPFX_ZQ_HXZQ
+            [2019-09-19 09:21:32,873][INFO] SPIDER_CONTENT CRMJPFX_ZQ_HXZQ None 2018-09-29 00:00:01 CRMJPFX_ZQ_HXZQ.ADDR 从mongo地址中取一条数据
+            [2019-09-19 09:21:32,935][ERROR] SPIDER_CONTENT CRMJPFX_ZQ_HXZQ None 2018-09-29 00:00:01 CRMJPFX_ZQ_HXZQ.ADDR 去mongodb中取一条数据，但没有找到可用数据，终止程序
+            [2019-09-19 09:21:32,936][INFO] SPIDER_CONTENT CRMJPFX_ZQ_HXZQ None 2018-09-29 00:00:01 CRMJPFX_ZQ_HXZQ.ADDR 爬虫开始运行---
+        </p>
+    </div>
+</div>
+</body>
+</html>
