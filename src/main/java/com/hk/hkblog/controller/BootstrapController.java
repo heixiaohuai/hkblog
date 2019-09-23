@@ -35,4 +35,9 @@ public class BootstrapController {
     public String bootstrap04(){
         return "/bootstrap/bootstrap04";
     }
+
+    @GetMapping("/bootstrap05")
+    public String bootstrap05(){
+        return "/bootstrap/bootstrap05";
+    }
 }
