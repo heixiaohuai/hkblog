@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>顶部的导航栏</title>
+    <meta accesskey="芳香世家"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <script type="text/javascript" charset="utf-8" th:src="@{/webjars/jquery/3.4.1/jquery.js}"></script>
+    <script type="text/javascript" charset="utf-8" th:src="@{/webjars/bootstrap/3.3.7/js/bootstrap.js}"></script>
+    <link  th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap.css}" rel="stylesheet">
+</head>
+<body>
+<!--抽取出来的公共模块页头-->
+<header id="top" th:fragment="public_header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <img th:src="@{/sh/logo.jpg}" alt="芳香世家LOGO" class="img-responsive center-block shlogo">
+            </div>
+            <div class="col-lg-8">
+                <ul class="nav nav-tabs">
+                    <li role="presentation"><a href="#">首页</a></li>
+                    <li role="presentation" class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+                           aria-expanded="false">
+                            产品中心<span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <a href="#"><p class="category_product" style="color: black;">外服</p></a>
+                            <a href="#"><p class="category_product" style="color: black;">内用</p></a>
+                        </ul>
+                    </li>
+                    <li role="presentation"><a href="#">肌肤问题</a></li>
+                    <li role="presentation">
+                        <a class="btn btn-black phone-btn" tabindex="0" data-trigger="focus" title="加入我们"
+                           data-container="body" data-toggle="popover" data-placement="bottom" data-content='<img src="/sh/qrcode.jpg" alt="VX二维码" class="img-responsive center-block"/>' >关于我们</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!--抽取出来的公共模块页脚-->
+<footer th:fragment="public_footer">
+    <div class="container">
+        <div class="row" style="margin-top: 30px">
+            <div class="text-center">
+                <ul class="nav nav-tabs">
+                    <li role="presentation"><a href="#">首页</a></li>
+                    <li role="presentation" class="dropup">
+                        <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                           href="#" role="button">
+                            产品中心
+                            <span class="caret"></span>
+                            <span class="sr-only">Toggle Dropdown</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <a href="#"><p class="category_product" style="color: black;">外服</p></a>
+                            <a href="#"><p class="category_product" style="color: black;">内用</p></a>
+                        </ul>
+                    </li>
+                    <li role="presentation"><a href="#">肌肤问题</a></li>
+                    <li role="presentation"><a href="#">关于我们</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 15px">
+            <p class="text-center" style="font-size: 12px; color: darkgrey;">©2019 阿夏的芳香世家|SpiceryHouse国妆芳香官网 版权所有</p>
+            <p class="text-center" style="font-size: 12px; color: darkgrey;">spicery house芳香世家正品店<small><a href="https://shop126776251.taobao.com/?spm=a1z10.1-c.0.0.6971fbf4pNRsiB">&nbsp;&nbsp;&nbsp;&nbsp;跳转...</a></small></p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

@@ -9,6 +9,9 @@
     <script type="text/javascript" charset="utf-8" th:src="@{/webjars/bootstrap/3.3.7/js/bootstrap.js}"></script>
     <link  th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap.css}" rel="stylesheet">
     <style type="text/css">
+        body{
+            background-color: #000000;
+        }
         .shlogo{
             height: 100px;
         }
@@ -32,32 +35,17 @@
         .homecarousel{
             height: 300px;
         }
+        .homejumbotron{
+            margin-top: 20px;
+            height: 250px;
+        }
+        p{
+            color: aliceblue;
+        }
     </style>
 </head>
 <body>
-<div class="container">
-    <div class="row">
-        <div class="col-lg-4 col-md-6">
-            <img th:src="@{/sh/logo.jpg}" alt="芳香世家LOGO" class="img-responsive center-block shlogo">
-        </div>
-        <div class="col-lg-8">
-            <ul class="nav nav-tabs">
-                <li role="presentation"><a href="#">首页</a></li>
-                <li role="presentation" class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                        产品中心<span class="caret"></span>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <a href="#"><p class="category_product">外服</p></a>
-                        <a href="#"><p class="category_product">内用</p></a>
-                    </ul>
-                </li>
-                <li role="presentation"><a href="#">肌肤问题</a></li>
-                <li role="presentation"><a href="#">关于我们</a></li>
-            </ul>
-        </div>
-    </div>
-</div>
+<div th:replace="~{commons/publicBar::public_header}"></div>
 <div class="container">
     <div class="row homecarousel">
         <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
@@ -111,30 +99,63 @@
 </div>
 <div class="container">
     <div class="row">
-        <ul class="nav nav-tabs">
-            <li role="presentation"><a href="#">首页</a></li>
-            <li role="presentation" class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                    产品中心<span class="caret"></span>
-                </a>
-                <ul class="dropdown-menu">
-                    <a href="#"><p class="category_product">外服</p></a>
-                    <a href="#"><p class="category_product">内用</p></a>
-                </ul>
-            </li>
-            <li role="presentation"><a href="#">肌肤问题</a></li>
-            <li role="presentation"><a href="#">关于我们</a></li>
-        </ul>
+        <div class="jumbotron homejumbotron">
+            <h1 class="text-center">芳香世家<small>  Spicery House</small></h1>
+            <p class="text-center" style="margin-top: 30px; color: #000000;">公司简介</p>
+            <p class="text-center" style="font-size: 15px; color: #000000;">Company Profile</p>
+        </div>
     </div>
-</div>
-<div class="container">
-    <div class="row">
-        <div class="text-center">
-            <video controls>
-                <source th:src="@{/video/dongnengshuangmp4.mp4}" type="video/mp4"/>
-            </video>
+
+    <div class="row" style="margin-top: 20px">
+        <div class="col-lg-8 col-md-7">
+            <img th:src="@{/sh/gongsi1.jpg}" alt="公司" class="img-responsive center-block">
+        </div>
+        <div class="col-lg-4 col-md-5">
+            <p style="text-indent: 1em; font-size: 18px"><label>SPICERYHOUSE</label>芳香世家运营总部。坐落于杭州经济技术高新区-
+                滨江区CBD板块-UDC星光时代大厦。毗邻亚洲最大的综合交通枢纽，区域内有超过千家的企业总部，是链接整个泛长江三角地区国际化贸易总
+                部聚集地。</p>
+        </div>
+    </div>
+
+    <div class="row" style="margin-top: 100px">
+        <div class="col-lg-3 col-md-4">
+            <p style="text-indent: 1em; font-size: 18px;"><label>SPICERYHOUSE</label>芳香世家品牌始终致力于向世界传递国妆的深厚
+                文化底蕴，让东方美闪耀世界，让世界爱上中国妆。同时，芳香世家也高度关注女性发展的各个方面，积极响应 “大众创业，万众创新”的国家
+                战略，为中国女性赋能，助力万千女性通过芳香世家品牌实现人生价值，倡导“悦享人生enjoy your life”，成为“她时代”护肤创业荣耀品牌。</p>
+        </div>
+        <div class="col-lg-9 col-md-8">
+            <img th:src="@{/sh/gongsi2.jpg}" alt="公司" class="img-responsive center-block">
+        </div>
+    </div>
+
+    <div class="row" style="margin-top: 100px">
+        <div class="col-lg-8 col-md-7">
+            <img th:src="@{/sh/gongsi3.jpg}" alt="公司" class="img-responsive center-block">
+        </div>
+        <div class="col-lg-4 col-md-5">
+            <p style="text-indent: 1em; font-size: 18px;">秉持“女人天生骄傲，国妆自带荣耀” 的品牌理念，SPICERY HOUSE芳香世家品牌
+                诞生当年内即实现突破亿元产值，并以迅雷之势开启千城万店，仅一年半时间实现了实体连锁皮肤管理中心7000余家。 至2020年将突破万店
+                连锁，成为中国护肤实体连锁行业门店最多的领军品牌！</p>
+        </div>
+    </div>
+
+    <div class="row" style="margin-top: 100px">
+        <div class="col-lg-3 col-md-4">
+            <p style="text-indent: 1em; font-size: 18px;"><label>SPICERYHOUSE</label>芳香世家产品种类包括：日化线化妆品，彩妆品
+                以及化妆品周边，产品以“植物结合现代科技，坚持十无添加，温和无刺激的同时确保其卓越效果”为理念，制造出最为适合中国现代女性肌肤
+                状态的化妆品。</p>
+        </div>
+        <div class="col-lg-9 col-md-8">
+            <img th:src="@{/sh/gongsi4.jpg}" alt="公司" class="img-responsive center-block">
         </div>
     </div>
 </div>
+<div th:replace="~{commons/publicBar::public_footer}"></div>
 </body>
+<script type="text/javascript">
+    $('[data-toggle="popover"]').popover({
+        trigger: 'focus',
+        html: true
+    });
+</script>
 </html>
